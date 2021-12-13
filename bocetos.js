@@ -12,12 +12,12 @@ const autos = require("./autos");
 */
 
 let a = [
-{   clave1 : 1,
+{   clave1 : "Hola!",
     clave2 : 2,
     clave3 : 3,
     clave4 : 4,
 },
-{   clave5 : 5,
+{   clave1 : "Holis!",
     clave6 : 6,
     clave7 : "Holis!",
     clave8 : 8,
@@ -25,10 +25,11 @@ let a = [
 ]
 //console.log(a[0].clave1);
 
+
 function buscar(n){
-    for (i=0;i<=a.length;i++){
+    for (i=0;i<a.length;i++){
         // 1º hay q saber si es que está el valor de la calve:
-        if (a[i].clave1(i+1)==n){
+        if (a[i].clave1==n){
             console.log("ESTAAA!");
         }
         }
@@ -39,8 +40,8 @@ function buscar(n){
         } */
 }
 
-
-buscar("nene")
+ 
+buscar("Holis!")
 
 
 /* tiene que buscar 
