@@ -1,11 +1,10 @@
 let autos = require ("./autos")
 
 const concesionaria = {
-    listado : autos,
+    autos : autos,
     buscarPatente : function(patente){
             let k=1
             for (i=0;i<autos.length;i++){ 
-                // 1º hay q saber si es que está el valor de la calve:
                 if (autos[i].patente==patente){
                     console.log("La patente se encuentra en el listado!");
                     return (autos[i].vendido = true )
@@ -20,5 +19,5 @@ const concesionaria = {
 
 }
 
-
 concesionaria.buscarPatente("APL123")
+//console.log(concesionaria.autos);
