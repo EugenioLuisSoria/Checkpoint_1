@@ -1,20 +1,6 @@
-let autos = require ("./autos")
+let a= [1,2,3,4,3]
 
-const concesionaria = {
-    autos : autos,
-    buscarAuto : function(patente){
-            let k=1
-            for (i=0;i<autos.length;i++){ 
-                if (autos[i].patente==patente){
-                    console.log("La patente se encuentra en el listado!");
-                    console.log(autos[i]);
-                    return (autos[i])
-                }else if (autos[i].patente!=patente){
-                    return null;        
-                }         
-            }
-    }
-
-}
-
-concesionaria.buscarAuto("JA123")
+let prueba = a.filter(function(n){
+    return n <=3
+})
+console.log(prueba);
