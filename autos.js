@@ -2,7 +2,7 @@ let autos = [{
   marca: 'Toyota',
   modelo: 'Ford',
   precio: 150000,
-  km: 200,
+  km: 99,
   color: 'Azul',
   cuotas: 12,
   anio: 2019,

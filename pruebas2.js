@@ -26,7 +26,8 @@ const concesionaria = {
             console.log("Se ha vendido este auto:");
         }
         for (i=0;i<autos.length;i++){ 
-            if (this.autos[i].patente==patente){
+            if (autos[i].patente==patente){
+                autos[i].patente = true;
                 console.log("prueba");
                 return this.autos[i].vendido = true;
             }else {return null}
@@ -36,7 +37,5 @@ const concesionaria = {
 
     }    
 }
-console.log(autos);
-concesionaria.venderAuto(`APL123`)
 
-console.log(autos[0]);
+concesionaria.buscarPatente("hasd")
