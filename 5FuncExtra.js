@@ -1,17 +1,18 @@
 let autos = require ("./autos")
-
 const concesionaria = {
     autos : autos,
-    buscarPatente : function (patente) { 
+    buscarPatente : function(patente) { 
         for (i=0;i<autos.length;i++){ 
-        if (autos[i].patente==patente){
-            console.log("La patente es: " + patente);
-        }
+            if (autos[i].patente==patente){
+            console.log("La patente: " + patente + " está.");
+            }
+            else{console.log("la patenente " + patente + " no está")}
         }
     },
     buscarAuto : function(patente){
         for (i=0;i<autos.length;i++){ 
             if (this.autos[i].patente==patente){
+                console.log(this.autos(patente))
                 return true
             }else if (autos[i].patente!=patente){
                 return null;   
@@ -46,4 +47,5 @@ const concesionaria = {
         console.log(autos0KM)
 }
 }
-concesionaria.venderAuto("JJK116")
+concesionaria.buscarPatente("JJK116")
+
