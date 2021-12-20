@@ -52,8 +52,8 @@ const concesionaria = {
         }
         )
         
-        //console.log( "Estos son los autos para vender:")
-        //console.log(autosParaVender)
+        console.log( "Estos son los autos para vender:")
+        console.log(autosParaVender)
         return autosParaVender
        
     },
@@ -104,21 +104,13 @@ const concesionaria = {
             
         }
     },
-    autosQuePuedeComprar : function(persona){
-        let autosDisponibles = this.autosParaLaVenta().filter(function(m){
-            let precioXCuota = (m.precio / m.cuotas)
-            return (m.precio <= persona.capacidadDePagoTotal && precioXCuota <= persona.capacidadDePagoEnCuotas)
-        }
-        )
-        console.log(autosDisponibles)
-        return(autosDisponibles)
-    }
 }
           
     
 
 //concesionaria.vvenderAuto("JJK116")
-concesionaria.autosQuePuedeComprar(personaJuan)
+concesionaria.puedeComprar("JJK116", personaJuan)
+concesionaria.puedeComprar("APL123", personaJuan)
    
 
         
