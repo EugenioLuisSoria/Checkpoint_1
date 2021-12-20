@@ -39,6 +39,7 @@ const concesionaria = {
             return n.vendido == false
         }
         )
+        
         console.log( "Estos son los autos para vender:")
         console.log(autosParaVender)
         return autosParaVender
@@ -46,17 +47,36 @@ const concesionaria = {
     },
     autosNuevos : function(){
         let autos0KM = this.autosParaLaVenta().filter(function(m){
-            return m.km <= 100
+            return m.km < 100
         }
         )
+        console.log("Estos son los 0KM para vender:")
         console.log(autos0KM)
+        return(autos0KM)
+    },
+    listaDeVentas : function(){
+            let lista = []
+            let k = []
+            for(i=0;i<this.autos.length;i++){
+                if (autos[i].vendido == true){
+                lista.push(this.autos[i].precio)
+                }
+            }
+            console.log(lista)
+            return(lista)
+            
+            
+        
     }
 }
         
         
 
-concesionaria.autosNuevos()
+
+console.log("-----------------------");
+concesionaria.listaDeVentas()
 console.log("-----------------------");
 concesionaria.venderAuto("JJK116")
 console.log("-----------------------");
-concesionaria.autosNuevos()
+concesionaria.listaDeVentas()
+
